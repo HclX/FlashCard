@@ -268,8 +268,9 @@
     requestAnimationFrame(() => quizInput.focus());
   }
 
-  // Shown only once an answer is graded correct — the "why is that the
-  // answer" note, not a hint for getting there.
+  // The "why is that the answer" note — shown once a card is graded,
+  // whether right or wrong, since it's equally useful for learning from
+  // a miss as for reinforcing a correct answer.
   function showInfoIfPresent(card) {
     if (card.info) {
       quizInfoLine.textContent = card.info;
@@ -294,13 +295,12 @@
       quizFeedbackLine.textContent = `✓ Correct — ${expected}`;
       quizFeedbackLine.className = 'quiz-feedback-line correct';
       quizOverride.hidden = true;
-      showInfoIfPresent(card);
     } else {
       quizFeedbackLine.textContent = `✗ Not quite. Answer: ${expected}`;
       quizFeedbackLine.className = 'quiz-feedback-line incorrect';
       quizOverride.hidden = false;
-      quizInfoLine.hidden = true;
     }
+    showInfoIfPresent(card);
 
     btnQuizNext.hidden = false;
     btnQuizNext.focus();

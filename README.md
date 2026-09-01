@@ -75,9 +75,9 @@ Every domain is a folder under `domains/`. To add one:
    - `image` (optional) is a path *relative to the domain's own folder* —
      put image/audio files in that domain's `resources/` folder and
      reference them from there. Also hidden in the same case as `hint`.
-   - `info` (optional) shows only *after* a correct answer — a short note
-     on why the answer is what it is (etymology, a naming rule, a
-     mnemonic), rather than a hint for getting there.
+   - `info` (optional) shows once you've answered, right or wrong — a
+     short note on why the answer is what it is (etymology, a naming
+     rule, a mnemonic), rather than a hint for getting there.
    - `id` should be unique **within the domain**. It's used to track each
      card's mastery streak during a session.
 
