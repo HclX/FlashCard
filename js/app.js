@@ -21,6 +21,7 @@
   const quizFormatTip = document.getElementById('quiz-format-tip');
   const quizFeedback = document.getElementById('quiz-feedback');
   const quizFeedbackLine = document.getElementById('quiz-feedback-line');
+  const quizInfoLine = document.getElementById('quiz-info-line');
   const quizOverride = document.getElementById('quiz-override');
   const btnQuizNext = document.getElementById('btn-quiz-next');
 
@@ -259,11 +260,23 @@
     quizInput.disabled = false;
     quizSubmit.disabled = false;
     quizFeedback.hidden = true;
+    quizInfoLine.hidden = true;
     quizOverride.hidden = true;
     btnQuizNext.hidden = true;
     quizGraded = false;
 
     requestAnimationFrame(() => quizInput.focus());
+  }
+
+  // Shown only once an answer is graded correct — the "why is that the
+  // answer" note, not a hint for getting there.
+  function showInfoIfPresent(card) {
+    if (card.info) {
+      quizInfoLine.textContent = card.info;
+      quizInfoLine.hidden = false;
+    } else {
+      quizInfoLine.hidden = true;
+    }
   }
 
   function checkQuizAnswer() {
@@ -281,10 +294,12 @@
       quizFeedbackLine.textContent = `✓ Correct — ${expected}`;
       quizFeedbackLine.className = 'quiz-feedback-line correct';
       quizOverride.hidden = true;
+      showInfoIfPresent(card);
     } else {
       quizFeedbackLine.textContent = `✗ Not quite. Answer: ${expected}`;
       quizFeedbackLine.className = 'quiz-feedback-line incorrect';
       quizOverride.hidden = false;
+      quizInfoLine.hidden = true;
     }
 
     btnQuizNext.hidden = false;
@@ -298,6 +313,7 @@
     quizFeedbackLine.textContent = `✓ Marked correct — ${expectedAnswerFor(card)}`;
     quizFeedbackLine.className = 'quiz-feedback-line correct';
     quizOverride.hidden = true;
+    showInfoIfPresent(card);
   }
 
   function goToNextQuizCard() {

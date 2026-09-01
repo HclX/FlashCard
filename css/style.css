@@ -366,6 +366,17 @@ button:focus-visible,
 .quiz-feedback-line.correct { color: var(--teal-dark); }
 .quiz-feedback-line.incorrect { color: var(--wrong); }
 
+.quiz-info-line {
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px dashed var(--paper-edge);
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text-muted);
+  text-align: left;
+}
+
 .link-btn {
   background: none;
   border: none;

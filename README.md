@@ -62,16 +62,22 @@ Every domain is a folder under `domains/`. To add one:
        "front": "Merci",
        "back": "Thank you",
        "hint": "Say it often",
-       "image": "resources/merci.png"
+       "image": "resources/merci.png",
+       "info": "From Latin 'mercedem' (reward/wages) — the same root gives English 'mercy' and 'mercantile'."
      }
    ]
    ```
 
    - `hint` (optional) shows on the front of the card, for learners who get
-     stuck.
+     stuck. It's hidden when the front is the expected *answer* (see
+     bidirectional quizzing below), since showing it would give the answer
+     away.
    - `image` (optional) is a path *relative to the domain's own folder* —
      put image/audio files in that domain's `resources/` folder and
-     reference them from there.
+     reference them from there. Also hidden in the same case as `hint`.
+   - `info` (optional) shows only *after* a correct answer — a short note
+     on why the answer is what it is (etymology, a naming rule, a
+     mnemonic), rather than a hint for getting there.
    - `id` should be unique **within the domain**. It's used to track each
      card's mastery streak during a session.
 

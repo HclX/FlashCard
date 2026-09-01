@@ -4,11 +4,12 @@
     "front": "Text or question shown on the front of the card",
     "back": "The answer, shown when the card is flipped",
     "hint": "Optional. A short nudge shown on the front if the learner is stuck",
-    "image": "resources/example.png"
+    "image": "resources/example.png",
+    "info": "Optional. Shown only after a correct answer, explaining why the answer is what it is (etymology, a naming rule, a mnemonic)"
   },
   {
     "id": "example-02",
-    "front": "You can delete the image and hint fields if you don't need them",
+    "front": "You can delete the image, hint, and info fields if you don't need them",
     "back": "Only 'id', 'front', and 'back' are required"
   }
 ]
