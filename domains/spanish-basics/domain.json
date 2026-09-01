@@ -1,8 +1,0 @@
-{
-  "id": "spanish-basics",
-  "name": "Spanish Basics",
-  "description": "Everyday words and phrases for a first trip to a Spanish-speaking country.",
-  "icon": "\ud83c\udf6b",
-  "color": "#2F6F62",
-  "cardsFile": "cards.json"
-}

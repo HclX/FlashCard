@@ -1,5 +1,7 @@
 # Flashcard Study
 
+**Live page: https://hclx.github.io/FlashCard/**
+
 A flashcard game that runs entirely in the browser — no backend, no build step.
 Content is organized into **domains**: self-contained folders you can add,
 remove, or hand to someone else without touching any code.
@@ -76,7 +78,7 @@ Every domain is a folder under `domains/`. To add one:
 4. Register the folder in `domains/manifest.json`:
 
    ```json
-   { "domains": ["spanish-basics", "periodic-table", "french-basics"] }
+   { "domains": ["chemistry-ap", "french-basics"] }
    ```
 
    Static hosting (including GitHub Pages) can't list a folder's contents at
@@ -143,10 +145,7 @@ flashcard-game/
 └── domains/
     ├── manifest.json       # list of domain folder names
     ├── _template/          # copy this to start a new domain
-    ├── spanish-basics/
-    │   ├── domain.json
-    │   └── cards.json
-    └── periodic-table/
+    └── chemistry-ap/
         ├── domain.json
         └── cards.json
 ```
