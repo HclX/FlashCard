@@ -1,0 +1,8 @@
+{
+  "id": "chemistry-ap",
+  "name": "AP Chemistry: Polyatomic Ions",
+  "description": "Formulas, names, and charges of common polyatomic ions and a few notable metal cations.",
+  "icon": "\ud83e\uddea",
+  "color": "#2F6F62",
+  "cardsFile": "cards.json"
+}

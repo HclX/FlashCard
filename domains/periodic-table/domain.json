@@ -1,0 +1,8 @@
+{
+  "id": "periodic-table",
+  "name": "Periodic Table",
+  "description": "Element symbols and their names, for chemistry class or general trivia.",
+  "icon": "\u269b\ufe0f",
+  "color": "#C9962C",
+  "cardsFile": "cards.json"
+}

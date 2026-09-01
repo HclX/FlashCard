@@ -1,0 +1,8 @@
+{
+  "id": "_template",
+  "name": "Your Domain Name",
+  "description": "One sentence describing what this deck teaches.",
+  "icon": "\ud83c\udf99\ufe0f",
+  "color": "#2F6F62",
+  "cardsFile": "cards.json"
+}
